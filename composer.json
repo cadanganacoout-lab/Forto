@@ -9,10 +9,16 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^8.2",
-        "inertiajs/inertia-laravel": "^2.0",
-        "laravel/framework": "^11.30",
-        "laravel/tinker": "^2.9"
+        "php": "^8.4.1",
+        "inertiajs/inertia-laravel": "^3.0",
+        "laravel/fortify": "^1.40",
+        "laravel/framework": "^13.23",
+        "laravel/tinker": "^3.0",
+        "laravel/wayfinder": "^0.1.21"
+    },
+    "require-dev": {
+        "pestphp/pest": "^5.0",
+        "pestphp/pest-plugin-laravel": "^5.0"
     },
     "autoload": {
         "psr-4": {
@@ -39,6 +45,11 @@
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1 --timeout=0\" \"npm run dev\" --names='server,queue,vite'"
         ],
+        "ci:check": [
+            "@php artisan test --compact",
+            "npm run types:check",
+            "npm run check"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "php artisan package:discover --ansi"
@@ -48,11 +59,14 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
         "audit": {
             "abandoned": "ignore"
         },
         "platform": {
-            "php": "8.2.0"
+            "php": "8.4.1"
         }
     },
     "minimum-stability": "stable",

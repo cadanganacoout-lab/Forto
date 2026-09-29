@@ -1,5 +1,6 @@
 /.env
 /.env.*
 /node_modules
+/vendor
 /public/index.html
 /public/index.php
