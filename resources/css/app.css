@@ -171,19 +171,6 @@
     padding-block: 128px;
 }
 
-.site-header {
-    position: relative;
-    z-index: 10;
-    border-bottom: 1px solid var(--portfolio-line);
-}
-
-.header-inner {
-    display: flex;
-    height: 82px;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .brand-mark {
     font-size: 29px;
     font-weight: 800;
@@ -194,42 +181,17 @@
     color: var(--portfolio-accent);
 }
 
-.desktop-nav {
-    display: flex;
-    align-items: center;
-    gap: 38px;
-    color: #b5bcb7;
-    font-size: 13px;
-}
-
-.desktop-nav a,
-.header-cta,
 .text-link,
 .back-to-top {
     transition: color 180ms ease;
 }
 
-.desktop-nav a:hover,
 .back-to-top:hover {
     color: var(--portfolio-accent);
 }
 
-.header-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--portfolio-accent) !important;
-    font-size: 13px;
-}
-
-.header-cta:hover,
 .text-link:hover {
     color: var(--portfolio-accent-soft) !important;
-}
-
-.menu-toggle,
-.mobile-nav {
-    display: none;
 }
 
 .skip-link {
@@ -1571,10 +1533,6 @@
         width: min(100% - 48px, 720px);
     }
 
-    .desktop-nav {
-        gap: 22px;
-    }
-
     .hero-section {
         min-height: 610px;
         grid-template-columns: 1fr 0.9fr;
@@ -1634,72 +1592,6 @@
 
     .section-space {
         padding-block: 86px;
-    }
-
-    .header-inner {
-        height: 70px;
-    }
-
-    .desktop-nav,
-    .header-cta {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: grid;
-        width: 40px;
-        height: 40px;
-        place-items: center;
-        border: 1px solid var(--portfolio-line);
-        border-radius: 4px;
-        background: transparent;
-        color: #edf0ea;
-    }
-
-    .mobile-nav {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        display: grid;
-        gap: 0;
-        padding: 0 20px;
-        border-bottom: 1px solid transparent;
-        background: #0b100f;
-        opacity: 0;
-        pointer-events: none;
-        transform: translateY(-8px);
-        visibility: hidden;
-        transition:
-            opacity 180ms ease,
-            transform 180ms ease,
-            border-color 180ms ease;
-    }
-
-    .mobile-nav.is-open {
-        padding-block: 9px;
-        border-color: var(--portfolio-line);
-        opacity: 1;
-        pointer-events: auto;
-        transform: translateY(0);
-        visibility: visible;
-    }
-
-    .mobile-nav a {
-        display: flex;
-        min-height: 48px;
-        align-items: center;
-        justify-content: space-between;
-        color: #dfe4de;
-        font-size: 13px;
-    }
-
-    .mobile-nav a + a {
-        border-top: 1px solid var(--portfolio-line);
-    }
-
-    .mobile-nav svg {
-        color: var(--portfolio-accent);
     }
 
     .hero-section {

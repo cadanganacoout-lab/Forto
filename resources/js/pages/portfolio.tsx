@@ -9,7 +9,6 @@ import {
     Linkedin,
     Mail,
     MapPin,
-    Menu,
     X,
 } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -33,7 +32,7 @@ const projects = [
         title: 'Personal Portfolio',
         description:
             'A personal portfolio showcasing my education, skills, and completed projects.',
-        technologies: ['React', 'Laravel'],
+        technologies: ['React'],
         href: 'https://gilangfaid.vercel.app/',
         visual: 'portfolio',
         visualLabel: 'GILANG.',
@@ -91,7 +90,6 @@ const skills = [
     { name: 'JavaScript', level: 90 },
     { name: 'React.js', level: 30 },
     { name: 'MySQL', level: 80 },
-    { name: 'Laravel', level: 40 },
 ];
 
 const tools = [
@@ -100,7 +98,6 @@ const tools = [
     'Figma',
     'XAMPP',
     'Bootstrap',
-    'Laravel Heart',
 ];
 
 const missions = [
@@ -152,16 +149,7 @@ const socials = [
     },
 ];
 
-const navigation = [
-    { label: 'About', href: '#about' },
-    { label: 'Work', href: '#work' },
-    { label: 'Journey', href: '#journey' },
-    { label: 'Certificates', href: '#certificates' },
-    { label: 'Contact', href: '#contact' },
-];
-
 export default function Portfolio() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [previewProject, setPreviewProject] = useState<Project | null>(null);
     const previewDialogRef = useRef<HTMLDialogElement>(null);
     const portfolioRef = useRef<HTMLDivElement>(null);
@@ -241,62 +229,6 @@ export default function Portfolio() {
                 <a className="skip-link" href="#main-content">
                     Skip to content
                 </a>
-
-                <header className="site-header">
-                    <div className="page-container header-inner">
-                        <a
-                            className="brand-mark"
-                            href="#home"
-                            aria-label="Gilang, home"
-                        >
-                            g<span>f</span>.
-                        </a>
-
-                        <nav
-                            className="desktop-nav"
-                            aria-label="Main navigation"
-                        >
-                            {navigation.map((item) => (
-                                <a key={item.href} href={item.href}>
-                                    {item.label}
-                                </a>
-                            ))}
-                        </nav>
-
-                        <a className="header-cta" href={`mailto:${email}`}>
-                            <span>Get in touch</span>
-                            <ArrowUpRight aria-hidden="true" size={16} />
-                        </a>
-
-                        <button
-                            className="menu-toggle"
-                            type="button"
-                            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-                            aria-expanded={isMenuOpen}
-                            aria-controls="mobile-navigation"
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        >
-                            {isMenuOpen ? <X size={21} /> : <Menu size={21} />}
-                        </button>
-                    </div>
-
-                    <nav
-                        className={`mobile-nav${isMenuOpen ? ' is-open' : ''}`}
-                        id="mobile-navigation"
-                        aria-label="Mobile navigation"
-                    >
-                        {navigation.map((item) => (
-                            <a
-                                key={item.href}
-                                href={item.href}
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                {item.label}
-                                <ArrowUpRight aria-hidden="true" size={16} />
-                            </a>
-                        ))}
-                    </nav>
-                </header>
 
                 <main id="main-content">
                     <section className="hero-section page-container" id="home">
