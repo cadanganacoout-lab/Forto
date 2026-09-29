@@ -3,8 +3,8 @@
     "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php@0.6.0",
-                "includeFiles": "bootstrap/**, config/**, database/**, public/**, resources/**, routes/**, storage/**, vendor/**, app/**"
+            "runtime": "vercel-php@0.7.3",
+            "includeFiles": "bootstrap/**, config/**, database/**, public/**, resources/**, routes/**, storage/**, vendor/**, app/**"
         }
     },
     "routes": [
