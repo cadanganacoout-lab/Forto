@@ -2,6 +2,20 @@
     "version": 2,
     "framework": null,
     "buildCommand": "npm run build",
+    "env": {
+        "APP_ENV": "production",
+        "APP_DEBUG": "false",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_EVENTS_CACHE": "/tmp/events.php",
+        "APP_PACKAGES_CACHE": "/tmp/packages.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php",
+        "CACHE_STORE": "array",
+        "LOG_CHANNEL": "stderr",
+        "QUEUE_CONNECTION": "sync",
+        "SESSION_DRIVER": "cookie",
+        "VIEW_COMPILED_PATH": "/tmp/views"
+    },
     "functions": {
         "api/index.php": {
             "runtime": "vercel-php@0.8.0"
