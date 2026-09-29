@@ -142,6 +142,10 @@
     }
 }
 
+.html {
+    scroll-behavior: smooth;
+}
+
 .portfolio-page {
     --portfolio-accent: #2b67e7;
     --portfolio-accent-hover: #4b81f2;
