@@ -3,12 +3,12 @@
     "framework": null,
     "functions": {
         "api/index.php": {
-            "runtime": "vercel-php",
+            "runtime": "vercel-php@0.7.3",
             "includeFiles": "bootstrap/**, config/**, database/**, public/**, resources/**, routes/**, storage/**, vendor/**, app/**"
         }
     },
     "env": {
-        "PHP_VERSION": "8.2"
+        "VERCEL_PHP_VERSION": "8.2"
     },
     "routes": [
         {
