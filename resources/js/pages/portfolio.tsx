@@ -57,7 +57,7 @@ const projects = [
         description:
             "A gateway website that brings all of my projects together.",
         technologies: ["HTML", "CSS", "JS"],
-        href: "https://download-landing-page.vercel.app/",
+        href: "https://pageoflang.vercel.app/",
         visual: "gateway",
         visualLabel: "GATEWAY",
         visualNote: "One place for all my projects.",
@@ -100,7 +100,7 @@ const skills = [
     { name: 'CSS', level: 85 },
     { name: 'JavaScript', level: 90 },
     { name: 'React.js', level: 30 },
-    { name: 'MySQL', level: 80 },
+    { name: 'Laravel', level: 50 },
 ];
 
 const tools = [
